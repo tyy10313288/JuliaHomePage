@@ -1,0 +1,42 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;  /* 使用視窗的完整高度 */
+    display: flex;
+    align-items: center;  /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    text-align: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0; /* 移除預設的邊距 */
+    padding: 20px;
+    display: none; /* 預設隱藏所有 h1 */
+}
+
+input[type="email"], button {
+    display: none;  /* 初始設置為隱藏 */
+    margin-top: 20px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #666;
+}
