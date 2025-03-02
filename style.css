@@ -38,6 +38,7 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
+
 .header-content {
   display: flex;
   flex-direction: column;
@@ -170,10 +171,28 @@ section h2 {
 
 /* 翻轉卡基本設定：設定固定高度，避免疊埋 */
 .flip-card {
-  background-color: transparent;
-  perspective: 1000px; /* 3D 效果所需 */
-  border-radius: 8px;
-  height: 350px;  /* 固定高度，可根據內容調整 */
+  perspective: 1000px;
+  height: 400px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  background: #1e1e1e;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
 }
 
 /* 內部容器要填滿父容器 */
@@ -185,6 +204,13 @@ section h2 {
   transform-style: preserve-3d;
   border-radius: 8px;
 }
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px; /* 3D 效果所需 */
+  border-radius: 8px;
+  height: 350px;  /* 固定高度，可根據內容調整 */
+}
+
 
 /* 表面與裏面：設定相同高度，避免內容超出 */
 .flip-card-front,
@@ -249,6 +275,83 @@ section h2 {
   color: var(--accent-color);
 }
 
+/* Work gallery container styling */
+.work-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Style each image in the gallery */
+.work-gallery img {
+  width: 30%;      /* Each image takes 30% of container's width */
+  border-radius: 4px;
+  object-fit: cover;
+}
+.work-gallery img:hover {
+  transform: scale(6); /* Scale image up by 10% on hover */
+}
+
+
+
+/* Blog Section */
+#blog {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#blog h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* Blog posts container */
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Blog post card */
+.blog-post {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Post title */
+.blog-post h3 {
+  margin-top: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--secondary-color);
+}
+
+/* Post summary */
+.post-summary {
+  font-size: 1rem;
+  margin: 0.8rem 0;
+}
+
+/* Read more link */
+.read-more {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.read-more:hover {
+  color: var(--highlight-color);
+}
+
+
 /* ===================== Contact Section ===================== */
 #contact p {
   text-align: center;
@@ -265,13 +368,8 @@ section h2 {
   color: var(--highlight-color);
 }
 
-/* ===================== Footer ===================== */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: #1e1e1e;
-  font-size: 0.9rem;
-}
+
+
 
 /* ===================== Preloader ===================== */
 #preloader {
