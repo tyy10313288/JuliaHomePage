@@ -293,65 +293,6 @@ section h2 {
   transform: scale(6); /* Scale image up by 10% on hover */
 }
 
-
-
-/* Blog Section */
-#blog {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-#blog h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--accent-color);
-  display: inline-block;
-  padding-bottom: 0.3rem;
-}
-
-/* Blog posts container */
-.blog-posts {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-/* Blog post card */
-.blog-post {
-  background: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-}
-
-/* Post title */
-.blog-post h3 {
-  margin-top: 0;
-  font-family: 'Orbitron', sans-serif;
-  color: var(--secondary-color);
-}
-
-/* Post summary */
-.post-summary {
-  font-size: 1rem;
-  margin: 0.8rem 0;
-}
-
-/* Read more link */
-.read-more {
-  text-decoration: none;
-  color: var(--accent-color);
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.read-more:hover {
-  color: var(--highlight-color);
-}
-
-
 /* ===================== Contact Section ===================== */
 #contact p {
   text-align: center;
@@ -367,9 +308,6 @@ section h2 {
 .contact-email a:hover {
   color: var(--highlight-color);
 }
-
-
-
 
 /* ===================== Preloader ===================== */
 #preloader {
